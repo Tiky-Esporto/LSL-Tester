@@ -63,7 +63,7 @@ default {
 		
 		// Using Timer to let the script "Sleep" between each test.
 		// Start timer.
-		llSetTimerEvent(0.001);
+		llSetTimerEvent(0.023);
 	}
 	timer() {
 		
