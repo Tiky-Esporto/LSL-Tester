@@ -67,8 +67,12 @@ default {
 	}
 	timer() {
 		
+		// We don't test when the region is idle.
+		if(llGetEnv("region_idle") == "1") return;
+		
 		// Stop timer cause each test is longer than the timer.
 		llSetTimerEvent(0);
+		llResetTime();
 		
 		// Flip the test order
 		g_iSwitch = !g_iSwitch;
