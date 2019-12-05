@@ -31,7 +31,10 @@ default {
 		llSetTimerEvent(1);
 	}
 	timer() {
-		if(llGetEnv("region_idle") == "1") return;
+		if(llGetEnv("region_idle") == "1") {
+			llSetTimerEvent(6000);
+			return;
+		}
 		llSetTimerEvent(0);
 		integer iTestNumb;
 		integer iTestIt;
